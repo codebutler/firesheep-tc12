@@ -1,0 +1,12 @@
+{
+	"name":"Firesheep TC12",
+	"description":"XXX",
+	"sections": [
+	  {"section":"intro"},
+		{"section":"http"},
+		{"section":"safe"},
+		{"section":"fail"},
+		{"section":"firesheep"},
+		{"section":"finish"}
+	]
+}
