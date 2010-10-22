@@ -13,6 +13,7 @@
 # Log out
 * But don't forget
 * Logging out doesn't guarantee cookies are invalidated
+* Usually they aren't (Foursquare, Amazon, many others)
 
 !SLIDE bullets incremental
 # Use only secure wifi
@@ -39,7 +40,7 @@
 !SLIDE center
 ![Dude, where's my SSL?](dude.jpg)
 
-!SLIDE bullets incremental
+!SLIDE smbullets incremental
 # HTTPS Everywhere
 * From EFF
 * Good start but:

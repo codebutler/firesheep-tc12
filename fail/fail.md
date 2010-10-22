@@ -4,37 +4,40 @@
 !SLIDE bullets incremental
 # 1) No SSL at all
 * Foursquare
-* Example 2
+* Enom (They're an SSL reseller!!1!)
 
 !SLIDE bullets incremental
 # 2) SSL for login only
 * Twitter
+* Foursquare
 * Facebook
-* Cookies are almost as valuable as password. Log Out fail.
+* Cookies are almost as valuable as password.
+* Log Out fail. Once attacker has cookie, nothing you can do.
 
 !SLIDE bullets incremental
 # 3) SSL with insecure cookies
 * Twitter
 * Slicehost
-* DropBox
-* More examples needed
+* DropBox (appear to have fixed this <2 weeks ago!)
+* FIXME: More examples needed
 
 !SLIDE bullets incremental
 # 4) Premium SSL
 * GitHub
-* xxx
+* Evernote
 
 !SLIDE bullets
-# blackmail (black·mail)
-* v. *demand money* from (a person) in return for *not revealing* *compromising or injurious information* about that person.
+# blackmail (black•mail)
+* `v.` *demand money* `from (a person) in return for` *not revealing* *compromising or injurious information* `about that person.`
 
-!SLIDE bullets incremental
-# compromising or injurious information
+!SLIDE smbullets incremental
+# _compromising or injurious information_
 * "If you have something that you don't want anyone to know, maybe you shouldn't be doing it in the first place." - Google CEO Eric Schmidt
-* Young people don't know risks.
-* Deserve a second chance.
-* Teen bullying/suicides a big problem.
-* Old people too. Google "eric schmidt mistress"
+* Many people use Facebook, etc. in place of "traditional" communication services.
+* Also, people make mistakes.
+
+!SLIDE center
+TODO: (screenshot of  "eric schmidt mistress" google search)
 
 !SLIDE bullets incremental
 # Social Networking Privacy
@@ -44,10 +47,14 @@
 * Twitter OAuth disaster.
 
 !SLIDE center
-photo of an elephant in a room
+TODO: photo of an elephant in a room
 
-!SLIDE bullets incremental
+!SLIDE smbullets incremental
 # Excuses
-* Ignorance. (Dropbox screenshot. Twitter full-disclosure incident.)
-* Scaling. (bad network design) mention Gmail blog post.
+* Ignorance.
+* TODO: Dropbox screenshot.
+* TODO: Twitter full-disclosure incident.
+* Scaling. (bad network design)
+* TODO: Gmail blog post about how they deployed SSL for all gmail
+* TODO: Wordpress blog post on SSL cookie architecture
 * IP Addresses. http://wiki.apache.org/httpd/NameBasedSSLVHostsWithSNI http://en.wikipedia.org/wiki/Server_Name_Indication

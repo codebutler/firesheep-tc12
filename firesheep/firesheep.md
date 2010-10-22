@@ -2,18 +2,19 @@
 # Stealing cookies is easy.
 
 !SLIDE command incremental
-# $ sudo tcpdump -i en1 tcp port 80
+# $ sudo tcpdump -A -i en1 tcp port 80
 
 !SLIDE bullets incremental
 # Ferret and Hamster
 * Blackhat
-* Lots of media: wapo, zdnet, etc... (LIST OUT HERE)
+* Pretty easy for us hackers to use
+* Lots of media: wapo, zdnet, etc... (TODO: LIST OUT HERE)
 * That was in 2007!
 
 !SLIDE bullets incremental
 # Almost nothing has improved
-* Gmail good
-* Hotmail, Yahoo, still bad.
+* Gmail good. Wordpress making smart decisions.
+* Hotmail, Yahoo, countless others - still bad.
 
 !SLIDE bullets incremental
 # Stealing cookies is easy.
@@ -22,23 +23,28 @@
 !SLIDE bullets incremental
 # Firesheep
 
-!SLIDE 
+!SLIDE
 # Firefox extension
 
-!SLIDE 
+!SLIDE bullets incremental
 # *One-click* session hijacking
+* HTTP Session-hijacking for the masses.
 
-!SLIDE
+!SLIDE center
 # Step 1
-(screenshot of capture button)
+TODO: Screenshot in stopped state
 
-!SLIDE 
+!SLIDE center
 # Step 2
-(screenshot 2)
+TODO: Screenshot in started state
 
 !SLIDE bullets incremental
-# There is no step 3.
+# Step 3.
+* There is no step 3.
 * Profit?
+
+!SLIDE center
+TODO: Screenshot of prefs
 
 !SLIDE
 # Extensible via javascript
