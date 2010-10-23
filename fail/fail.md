@@ -3,8 +3,8 @@
 
 !SLIDE bullets incremental
 # 1) No SSL at all
-* Foursquare
-* Enom (They're an SSL reseller!!1!)
+* Digg
+* Reddit
 
 !SLIDE bullets incremental
 # 2) SSL for login only
@@ -37,7 +37,7 @@
 * Also, people make mistakes.
 
 !SLIDE center
-TODO: (screenshot of  "eric schmidt mistress" google search)
+![Eric Schidt Mistress](eric-schmidt-mistress.png)
 
 !SLIDE bullets incremental
 # Social Networking Privacy
@@ -47,7 +47,7 @@ TODO: (screenshot of  "eric schmidt mistress" google search)
 * Twitter OAuth disaster.
 
 !SLIDE center
-TODO: photo of an elephant in a room
+![Elephant in the room](elephant-in-the-room.jpeg)
 
 !SLIDE smbullets incremental
 # Excuses
@@ -55,6 +55,6 @@ TODO: photo of an elephant in a room
 * TODO: Dropbox screenshot.
 * TODO: Twitter full-disclosure incident.
 * Scaling. (bad network design)
-* TODO: Gmail blog post about how they deployed SSL for all gmail
+* Gmail defaulted to HTTPS for everything: http://www.imperialviolet.org/2010/06/25/overclocking-ssl.html
 * TODO: Wordpress blog post on SSL cookie architecture
 * IP Addresses. http://wiki.apache.org/httpd/NameBasedSSLVHostsWithSNI http://en.wikipedia.org/wiki/Server_Name_Indication
