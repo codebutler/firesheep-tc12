@@ -15,50 +15,27 @@
 
 !SLIDE bullets incremental
 # WiFi
-* Cookies literally shouted through the air.
+* Cookies shouted through the air.
 * Someone just has to start listening.
 
 !SLIDE command incremental
-# sudo tcpdump -A -i en1 tcp port 80
+# $ sudo tcpdump -A -i en1 tcp port 80
 
 !SLIDE code
 # Request #
-(Minecraft HTTP Login, cleaned up)
+    POST /login.php?login_attempt=1 HTTP/1.1
+    Host: login.facebook.com
 
-POST /game/getversion.jsp HTTP/1.1
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 40
-Content-Language: en-US
-Cache-Control: no-cache
-Pragma: no-cache
-User-Agent: Java/1.6.0_20
-Host: www.minecraft.net
-Accept: text/html, image/gif, image/jpeg, *; q=.2, */*; q=.2
-Connection: keep-alive
-
-
-user=craSH&password=o_hai_t00rc0n!&version=12
-
-
-
+<pre>email=<b>sheep@example.com</b>&amp;pass=<b>supersecure</b></pre>
+    
 !SLIDE code
 # Response #
-(Minecraft HTTP Login, cleaned up)
-
-HTTP/1.1 200 OK
-Server: Resin/3.1.9
-Cache-Control: private
-Set-Cookie: JSESSIONID=abcdW_m35A6oTgWH2L6Ts; path=/
-Content-Type: text/html
-Transfer-Encoding: chunked
-Date: Tue, 05 Oct 2010 04:12:44 GMT
-
-0010
-User not premium
-0
-
+<pre>HTTP/1.1 302 Found
+Location: http://www.facebook.com/home.php?
+Set-Cookie: xs=<b>b1cac66e11145bc79847a98f98a6a19c</b>; path=/; domain=.facebook.com; httponly
+</pre>
 
 !SLIDE bullets incremental
 # "Session hijacking"
-* "sidejacking?"
+* "sidejacking"
 

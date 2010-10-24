@@ -1,24 +1,12 @@
 !SLIDE bullets incremental
-# Stealing cookies is easy.
+# Widely known problem
 
-!SLIDE command incremental
-# $ sudo tcpdump -A -i en1 tcp port 80
-
-!SLIDE bullets incremental
-# Ferret and Hamster
-* Blackhat
-* Pretty easy for us hackers to use
-* Lots of media: wapo, zdnet, etc... (TODO: LIST OUT HERE)
-* That was in 2007!
+!SLIDE center
+![Elephant in the room](elephant_rave.jpg)
 
 !SLIDE bullets incremental
-# Almost nothing has improved
-* Gmail good. Wordpress making smart decisions.
-* Hotmail, Yahoo, countless others - still bad.
-
-!SLIDE bullets incremental
-# Stealing cookies is easy.
-* But not easy enough?
+# Enough is enough.
+* How to make people understand risk?
 
 !SLIDE bullets incremental
 # Firesheep
@@ -28,23 +16,15 @@
 
 !SLIDE bullets incremental
 # *One-click* session hijacking
-* HTTP Session-hijacking for the masses.
 
-!SLIDE center
-# Step 1
-TODO: Screenshot in stopped state
+!SLIDE center bullets
+* (TODO: Screenshot in stopped state)
 
-!SLIDE center
-# Step 2
-TODO: Screenshot in started state
+!SLIDE center bullets
+* (TODO: Screenshot in started state)
 
-!SLIDE bullets incremental
-# Step 3.
-* There is no step 3.
-* Profit?
-
-!SLIDE center
-TODO: Screenshot of prefs
+!SLIDE center bullets
+* (TODO: Screenshot of hijacked session)
 
 !SLIDE
 # Extensible via javascript
@@ -64,16 +44,13 @@ TODO: Screenshot of prefs
       }
     });
     
-!SLIDE bullets
+!SLIDE bullets incremental
+# Firesheep
 * Free
 * Open Source 
 * Mac OS X
-* Linux
-
-!SLIDE bullets incremental
-# Easy
-* Even a tech journalist should be able to do it.
-* (But let us know if you need help)
+* Windows (Beta)
+* Linux (Soon)
 
 !SLIDE bullets
 # Available Now

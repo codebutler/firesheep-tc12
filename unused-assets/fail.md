@@ -48,13 +48,3 @@
 
 !SLIDE center
 ![Elephant in the room](elephant-in-the-room.jpeg)
-
-!SLIDE smbullets incremental
-# Excuses
-* Ignorance.
-* TODO: Dropbox screenshot.
-* TODO: Twitter full-disclosure incident.
-* Scaling. (bad network design)
-* Gmail defaulted to HTTPS for everything: http://www.imperialviolet.org/2010/06/25/overclocking-ssl.html
-* TODO: Wordpress blog post on SSL cookie architecture
-* IP Addresses. http://wiki.apache.org/httpd/NameBasedSSLVHostsWithSNI http://en.wikipedia.org/wiki/Server_Name_Indication

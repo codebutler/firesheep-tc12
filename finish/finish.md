@@ -1,5 +1,6 @@
-!SLIDE
+!SLIDE bullets
 # Known problem.
+* For attacker, has always been easy.
 
 !SLIDE bullets incremental
 # Companies have a responsibility to protect you.
