@@ -1,0 +1,151 @@
+Intro (Ian)
+
+- Hi everyone!
+- Introduce selfs
+- Here to talk about big threat to web privacy
+- Old but still not fixed
+- Will be releasing a new tool, shows how easy "attack" is
+
+HTTP (Eric)
+
+- Quick background
+- Http is a request/response protocol
+- Cookie is all that being "logged in" means
+- Therefore, cookies should be kept secure, but usually are not.
+
+Wifi (Ian)
+
+- Problem is big issue because of wifi
+- Cookies are shouted through the air, someone just needs to start listening
+- And here's the typical way to start listening
+- Request/response
+- If you copy that cookie string into your browser, you'll be logged in as that user. That's it.
+- This is know as "session hijacking" or "sidejacking"
+
+Staying safe? (Ian)
+
+- How do you avoid leaking sensitive cookie data?
+- Lots of things make this difficult.
+
+Avoiding Sites (Eric)
+
+- You might think, "I'll just avoid visiting any websites I'm logged into while on a public network".
+- Good luck. Its very easy to make mistakes.
+- If you type 'domain' instead of 'https://facebook.com', you're screwed
+- Websites embed content from sites you may have a session with.
+- For example, lets look at the website for Metrix Create Space, a hackerspace in Seattle.
+- Right away you notice the Facebook widget on the left
+- If you scroll down you'll see Twitter... and Foursquare
+- and of course all these nice photos we've been seeing are from flickr. 
+- So by visiting this one website, you potentially leak a session for 4 different unrelated websites.
+
+"Like" image (Ian)
+
+- This thing is another good example. Every time you see one of these, if you're logged into Facebook, you leak your session.
+- If you've got your language set to Pirate you'll see this.
+
+- So its really easy to make mistakes, but in the end you don't even have to slip up. We've just been talking about what you can do passively, but an active attacker can just redirect your browser to anywhere they choose. SSLStrip is a tool that can be used to do this.
+
+Log Out (Eric)
+
+- So maybe the lesson here is that you need to log out.
+- But what happens if you forget? You've just arrived at the hacker conference and are about to wake your laptop up from sleep when you remember you left your browser running with Facebook open. Your laptop will automatically connect to the network and Facebook will instantly start spewing out packets to update the chat buddy list.
+- So now you're staring at your laptop like its a land mine you just stepped on.
+
+- So you fuck up and leak a few packets... so you just log out to invalidate the session right? Turns out, "Log Out" often just clears cookies from your computer. Session lives on. Twitter sessions last until you change your password. This is why companies need to start treating session cookies with the same carefulness as passwords. Stops shouting, but too late.
+
+Secure Wifi (Ian)
+
+- Okay so you've decided you're worried enough and never going to use open wifi again.
+- Design of WPA2 is to protect users from each other.
+- Doesn't work for public spaces, you'll be stuck in your basement. You can't just post the password on the wall because then anyone could set up their own access point.
+- Wifi security has a long history of problems. Most recently Hole 196 which allows authenticate WPA2 clients to read each others packets.
+- And even if wireless security did work, it only protects your data as it travels through the air. So then the question is, do you actually trust whoever is running the network? What about your ISP? Does Comcast really need to not only know everything you do online, but also have access to your accounts? It only takes one rogue employee, for example as we saw recently with the Gmail scandle.
+
+VPN (Ian)
+
+- So, to hell with all this, I'm just going to use a VPN.
+- VPNs are great, but they aren't a silver bullet.
+- There can be a delay between when your computer starts up and when the VPN connection is established during which time packets will be sent directly out your internet connection unencrypted. If the connection drops, either due to a bad connection or an active attacker, your system might fall back to direct traffic.  
+- Just moves the problem, doesn't solve it. Same issue with ISP trust, just on the other side of the world. <-- elabroate
+- And VPNs can be very annoying, and prevent you from doing useful things on the local network.
+
+End to end (Eric)
+
+- So the real solution here is end to end encryption.
+- Your packets should be confidential between you and their final destination.
+- Anything else is just shuffling the problem around and not fixing anything.
+
+SSL (Eric)
+
+- The way to do end-to-end encryption on the web is SSL.
+- SSL is the *only* way to effectively stop session hijacking attacks.
+- Unfortunately popular sites don't implement it or don't implement it properly. 
+
+Excuses (Ian)
+
+- What are the reasons don't companies implement proper SSL?
+
+Excuses: Ignorance (Ian)
+
+- One reason might be ignorance. DropBox until recently had SSL but didn't properly enforce it. There's a great thread on their forums where some user is trying to convince one of their developers of the problem.
+
+Excuses: IP Addresses (Eric)
+
+- This isnt a problem for large companies, but a common excuse for not using SSL everywhere is lack of IP Addresses. 
+
+- Historically you've needed one IP address for every SSL website, but Server Name Indication fixed that problem.
+
+- Works for basically everyone except XP users.
+
+Excuses: Scaling (Eric)
+
+- An excuse often heard from big companies is scaling. Some of these sites barely stay up as it is, crypto would be a total disaster.
+
+- Gmail however enabled SSL for all users in the begining of this year. An engineer who worked on the project mentioned on his personal blog that they added no additional hardware.
+
+- Don't be so proud of your completely insecure barely operational site. Companies need to scale securely from the start. Its only going to get harder.
+
+Web 2.0 Privacy (Ian)
+
+- There's lots of talk about privacy on the web lately. People complaining about new Facebook features and privacy policies... but what does this all matter if someone can just take over your account?
+
+Does anyone care? (Ian)
+
+- So then the question is, does this even matter at all? What's the harm if someone gets into my Facebook account?
+- A lot of people use Facebook and other SAAS sites as their primary form of communication.
+- Email might not be any better. Hotmail for example does not encrypt all traffic.
+- And *lots* of sites do this wrong. A great example is Enom. They SELL SSL CERTIFICATES yet they don't use SSL for their management interface. It's incredible.
+
+Elephant (Ian)
+- Lack of SSL is the elephant in the room of online privacy.
+- This problem is extremely widely known, has been around since day #1 of the internet, yet new companies keep popping up without addressing it.
+- The elephant has really moved in.
+
+Enough is enough (Eric)
+- This has gone on for so long. I'm tired of having to constantly look over my shoulder.
+- How can we make people understand the risk?
+
+Firesheep (Eric)
+
+That brings us to Firesheep, a new tool written by me being released today.
+It's a Firefox extension
+that offers one-click session hijacking.
+After installing, you'll see a new sidebar. Click the giant "Start" button.
+When an HTTP session for a known website is detected, Firesheep will automatically look up information about that person and display it. 
+Double-click on an entry to log into the website as them.
+That's it.
+It's extensible via javascript to add support for additional websites. Here's an example showing a simple handler for HackerNews. All you have to do is specify the domain name, which cookies make up a session, and then optionally a simple function that can go figure out who this person is.
+Firesheep is free, open source, and runs on OS X and Windows. Linux support coming soon.
+
+It's available now from addons.mozilla.org.
+
+So this has been a known problem for a very long time. This has always been extremely easy, Firesheep just combines all the steps together into one tool.
+
+Companies really have a responsibility to protect you, especially big companies like Facebook who know the risks, but they refuse.
+
+Everyone should demand SSL everywhere.
+
+But until that happens... enjoy the wifi!
+
+Any questions?
