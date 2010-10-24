@@ -19,7 +19,7 @@
 ![](metrix3.png)
 
 !SLIDE center
-![](like.png)
+![](techcrunch.png)
 
 !SLIDE bullets incremental
 # Avoiding insecure sites when on wifi?

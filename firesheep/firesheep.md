@@ -17,14 +17,14 @@
 !SLIDE bullets incremental
 # *One-click* session hijacking
 
-!SLIDE center bullets
-* (TODO: Screenshot in stopped state)
+!SLIDE center
+![Firesheep in Stopped State](1sheep.png)
 
-!SLIDE center bullets
-* (TODO: Screenshot in started state)
+!SLIDE center
+![Firesheep in Started State](2sheep.png)
 
-!SLIDE center bullets
-* (TODO: Screenshot of hijacked session)
+!SLIDE center
+![Firesheep with Hijacked Facebook](3sheep.png)
 
 !SLIDE
 # Extensible via javascript
