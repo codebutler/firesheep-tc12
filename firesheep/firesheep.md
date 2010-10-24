@@ -54,4 +54,5 @@
 
 !SLIDE bullets
 # Available Now
-* Download @ http://URLHERE
+* http://codebutler.github.com/firesheep
+* http://addons.mozilla.org

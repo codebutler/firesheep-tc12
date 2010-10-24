@@ -17,4 +17,19 @@
 
 !SLIDE bullets
 # Questions?
-* Download firesheep at URL GOES HERE
+* Download Firesheep at
+* http://codebutler.github.com/firesheep
+* Ian Gallagher
+<div align="center" style="font-size: 2em">
+  @cdine
+  <br/>
+  crash@neg9.org
+  <br/>
+  igallagher@securityinnovation.com
+</div>
+* Eric Butler
+<div align="center" style="font-size: 2em">
+  @codebutler
+  <br/>
+  eric@codebutler.com
+</div>
